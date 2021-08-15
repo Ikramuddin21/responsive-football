@@ -1,0 +1,298 @@
+/* Font import */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+/* Common style */
+
+* {
+    margin: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+h2 {
+    font-size: 28px;
+}
+
+p {
+    font-size: 18px;
+    color: #6C6C6C;
+}
+
+.link-button{
+    width: 168px;
+    height: 44px;
+    margin-top: 27px;
+    padding: 12px 20px;
+    background-color: #E02C6D;
+    border: none;
+}
+
+.link-button:hover {
+    background-color: #3ABBFD;
+    transition: background-color 1s ease-in;
+}
+
+.link-button a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+.link-button:hover a {
+    color: black;
+    transition: color 1.5s ease-in;
+}
+
+.fa-arrow-right {
+    margin-left: 10px;
+}
+
+/* Banner style */
+
+.banner-container {
+    background-color: #2D25A0;
+    padding: 86px;
+}
+
+.banner-area {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.banner-info {
+    width: 35%;
+}
+
+.banner-title {
+    font-size: 64px;
+    color: white;
+}
+
+/* Players area style */
+
+.players-container {
+    margin-top: 70px;
+    display: flex;
+    justify-content: center;
+}
+
+.players {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-row-gap: 27px;
+    grid-column-gap: 30px;
+}
+
+.player {
+    width: 330px;
+    height: 474px;
+    padding: 15px;
+    text-align: center;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+}
+
+.player-img img {
+    width: 320px;
+    height: 256px;
+}
+
+/* Match highlight style */
+
+.match-container {
+    margin: 165px 0;
+}
+
+.match-highlight {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.match-info {
+    width: 30%;
+}
+
+.match-title {
+    font-size: 48px;
+}
+
+/* Photo gallery style */
+
+.photo-container {
+    text-align: center;
+}
+
+.photo-container h1 {
+    font-size: 38px;
+}
+
+.photo-album {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 70px;
+}
+
+.photo-frame {
+    width: 300px;
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+    margin: 15px;
+    border-radius: 5px;
+}
+
+.photo-frame:hover .photo {
+    transform: scale(1.2);
+    transition: transform 1.5s ease-in-out;
+}
+
+.photo img {
+    width: 100%;
+}
+
+.photo-info {
+    position: absolute;
+    top: 0;
+    height: 250px;
+    display: none;
+}
+
+.photo-frame:hover .photo-info {
+    display: block;
+    padding: 5px;
+    background-color: rgba(52, 71, 47, 0.6);
+}
+
+.photo-info h2 {
+    color: white;
+}
+
+.photo-info p {
+    color: white;
+    font-size: 17px;
+}
+
+/*  Partners area style */
+
+.partners-container {
+    text-align: center;
+    margin-top: 150px;
+}
+
+.partners-container h1 {
+    font-size: 35px;
+}
+
+.partners-logo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 100px;
+}
+
+.partners-logo img {
+    width: 110px;
+    height: 60px;
+}
+
+/* Footer style */
+
+footer {
+    text-align: center;
+    margin-top: 300px;
+}
+
+footer img {
+    width: 30%;
+}
+
+.footer-icon i {
+    margin: 20px 7px;
+    padding: 7px;
+    font-size: 18px;
+    color: #969BAB;
+    background-color: lightgray;
+    border-radius: 50%;
+}
+
+/* Media query */
+
+/* Mobile device */
+
+@media only screen and (max-width: 688px) {
+    .banner-container {
+        padding: 10px;
+    }
+
+    .banner-area, .match-highlight {
+        flex-direction: column;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .banner-info, .match-info{
+        width: 100%;
+    }
+
+    .link-button {
+        margin-bottom: 20px;
+    }
+
+    .banner-img img {
+        width: 450px;
+    }
+
+    .players {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .match-img img {
+        width: 450px;
+    }
+
+    footer img {
+        width: 50%;
+    }
+}
+
+/* Tablet device */
+
+@media only screen and (min-width: 688px) and (max-width: 992px) {
+    .banner-area, .match-highlight {
+        flex-direction: column;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .banner-info, .match-info {
+        width: 100%;
+    }
+
+    .link-button {
+        margin-bottom: 20px;
+    }
+
+    .players {
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 20px;
+    }
+
+    .player {
+        width: 300px;
+        height: auto;
+    }
+
+    .player-img img {
+        width: 100%;
+    }
+
+    footer img {
+        width: 40%;
+    }
+}
